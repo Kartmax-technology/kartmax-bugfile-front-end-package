@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url":"git://Kartmax-technology/kartmax-bugfile-front-end-package",
+    "url":"git@github.com:Kartmax-technology/kartmax-bugfile-front-end-package.git",
     "directory": "@kartmax-technology/kartmax-bugfile-front-end-package"
   },
   "author": "KartMax",
