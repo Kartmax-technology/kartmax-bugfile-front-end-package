@@ -1,0 +1,19 @@
+{
+  "name": "kartmax-bugfile-front-end-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package/issues"
+  },
+  "homepage": "https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package#readme"
+}
