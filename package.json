@@ -4,14 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node ./post-install.js"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/Kartmax-technology"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package.git"
+    "url": "git+https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package.git",
+    "directory": "@kartmax-technology/kartmax-bugfile-front-end-package"
   },
-  "author": "",
+  "author": "KartMax",
   "license": "ISC",
+  "dependencies": {
+    "gently-copy": "^3.2.0"
+  },
   "bugs": {
     "url": "https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package/issues"
   },
