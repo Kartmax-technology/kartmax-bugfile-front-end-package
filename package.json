@@ -19,9 +19,6 @@
   "license": "ISC",
   "dependencies": {
     "gently-copy": "^3.2.0"
-  },
-  "bugs": {
-    "url": "https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package/issues"
-  },
-  "homepage": "https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package#readme"
+  }
+
 }
