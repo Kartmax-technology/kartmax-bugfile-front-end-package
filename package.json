@@ -8,11 +8,11 @@
     "postinstall": "node ./post-install.js"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Kartmax-technology"
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
-    "url":"ssh://git@github.com:Kartmax-technology/kartmax-bugfile-front-end-package.git",
+    "url":"git://Kartmax-technology/kartmax-bugfile-front-end-package",
     "directory": "@kartmax-technology/kartmax-bugfile-front-end-package"
   },
   "author": "KartMax",
