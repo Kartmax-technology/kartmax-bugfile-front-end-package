@@ -1,6 +1,6 @@
 {
   "name": "@kartmax-technology/kartmax-bugfile-front-end-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "- If this is the first time that you are setting up your project to install private repositories as npm package, please make sure to set up your project first. - For setting up the project, please read the steps from [here](https://postscripts.medium.com/npm-install-packages-from-github-9ec5c6fd0058)",
   "main": "bugFile.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package.git",
-    "directory":"@kartmax-technology/kartmax-bugfile-front-end-package"
+    "directory": "@kartmax-technology/kartmax-bugfile-front-end-package"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Kartmax-technology"
@@ -20,7 +20,5 @@
     "url": "https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package/issues"
   },
   "homepage": "https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package#readme",
-  "dependencies": {
-    "gently-copy": "^3.2.0"
-  }
+  "dependencies": {}
 }
