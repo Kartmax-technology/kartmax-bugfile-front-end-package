@@ -1,6 +1,5 @@
 import Axios from "axios";
 
-
 export const bugFileFunction = {
     typeErr(error, vm, info, ){
         this.common(error.toString(), vm, info)
