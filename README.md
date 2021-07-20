@@ -11,12 +11,21 @@
     ```
   npm install https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package.git
     ```
-- Once the installation is complete, you shall have a bugFile.js file in root.
-- Paste these function in main.js file
-    - import file
-        import {bugFileFunction} from  "../bugFile.js";
-      
-    1. Vue.config.errorHandler = (error, vm, info) => {
+- Once the installation is complete, you shall have the package in your node modules folder.
+- 
+- # Usage
+
+- Simply import the component in any of your main.js file.
+    ```
+    import {bugFileFunction} from "node_modules/...."
+    ```
+    Real Example (Relative Path): 
+  ```
+  import {bugFileFunction}  from "../node_modules/@kartmax-technology/kartmax-bugfile-front-end-package/bugFile.js"; 
+  ```
+    Copy all these function  
+  ```
+   1. Vue.config.errorHandler = (error, vm, info) => {
         bugFileFunction.typeErr(error, vm, info)
     };
 
