@@ -40,7 +40,7 @@
         .then(function (res) {
         })
         .catch(function (err) {
-        bugFileFunction.network(err.config, event.reason);
+        bugFileFunction.network(err.config, err.message);
         });
     });
   ```
