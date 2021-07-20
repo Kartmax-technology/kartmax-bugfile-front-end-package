@@ -9,26 +9,96 @@
 - Open a terminal in your root folder of your project.
 - Run
     ```
-  npm install https://github.com/Kartmax-technology/kartmax-search-front-end-package.git
+  npm install https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package.git
     ```
-- Once the installation is complete, you shall have a bugFile.js file in root.
-- Paste these function in main.js file
-    - import file
-        import {bugFileFunction} from  "../bugFile.js";
-      
-    1. Vue.config.errorHandler = (error, vm, info) => {
-        bugFileFunction.typeErr(error, vm, info)
+- Once the installation is complete, you shall have the package in your node modules folder.
+
+[![Kartmax Front-end Bugfile](https://img.youtube.com/vi/NJukhVAUIRw/0.jpg)](https://www.youtube.com/watch?v=NJukhVAUIRw)
+
+# Global error handling Usage
+
+- Simply import the component in any of your main.js file.
+    ```
+    import {bugFileFunction} from "node_modules/...."
+    ```
+- Real Example (Relative Path): 
+  ```
+  import {bugFileFunction}  from "../node_modules/@kartmax-technology/kartmax-bugfile-front-end-package/bugFile.js"; 
+  ```
+- Copy all these function and place it in your root file inside script tag  
+  ```
+   Vue.config.errorHandler = (error, vm, info) => {
+         let config = {
+            key: "QHixYrGS9EHSZqLJSXCwduKj1lC9Dv7NIl95GN9vPmXVm12vzj9KKUpHzQzIYA6j",
+            user : "Aakanksha",
+            logger: "Admin",
+            source: "warning",
+            severity: 4,
+            properties : "-"
+        }
+        bugFileFunction.typeErr(config,error, vm, info)
     };
 
-    2. Vue.config.warnHandler = function(msg, vm, trace) {
-        bugFileFunction.warning(msg, vm, trace)
+   Vue.config.warnHandler = function(msg, vm, trace) {
+          let config = {
+            key: "QHixYrGS9EHSZqLJSXCwduKj1lC9Dv7NIl95GN9vPmXVm12vzj9KKUpHzQzIYA6j",
+            user : "Aakanksha",
+            logger: "Admin",
+            source: "warning",
+            severity: 4,
+            properties : "-"
+        }
+        bugFileFunction.warning(config,msg, vm, trace)
     }
-    3. window.addEventListener("unhandledrejection", function (event) {
+   
+   window.addEventListener("unhandledrejection", function (event) {
+         let config = {
+            key: "QHixYrGS9EHSZqLJSXCwduKj1lC9Dv7NIl95GN9vPmXVm12vzj9KKUpHzQzIYA6j",
+            user : "Aakanksha",
+            logger: "Admin",
+            source: "warning",
+            severity: 4,
+            properties : "-"
+        }
         event.promise
         .then(function (res) {
         })
         .catch(function (err) {
-        bugFileFunction.network(err.config, event.reason);
+        bugFileFunction.network(config,err.config, err.message);
         });
     });
+  ```
 
+# Contextual Error handling
+
+- If you wish to catch an exception that might occur during any axios call or simple calculation at client side,
+just use a try-catch and inside catch, call the bugfileFunction, this shall log the bug onto server.
+```
+get_menu: function () {
+      axios
+        .get(
+          this.$root.api_url +
+            `/pim/pimresponse.php?service=menu&store=${this.$root.store}`
+        )
+        .then((response) => {
+          response.data.result.forEach;
+          this.$root.menu = response.data.result;
+        })
+        .catch((error) => {
+          if (error.message === "Network Error") {
+            this.$root.error_message =
+              "Oops there seems to be some Network issue, please try again.";
+          }
+            let config = {
+                key: "QHixYrGS9EHSZqLJSXCwduKj1lC9Dv7NIl95GN9vPmXVm12vzj9KKUpHzQzIYA6j",
+                user : "Aakanksha",
+                logger: "Admin",
+                source: "warning",
+                severity: 4,
+                properties : "-"
+            }
+           bugFileFunction.network(config,error.config, error.message);
+          window.scrollTo(0, 0);
+        });
+    },
+```
