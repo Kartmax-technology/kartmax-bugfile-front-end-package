@@ -9,7 +9,7 @@
 - Open a terminal in your root folder of your project.
 - Run
     ```
-  npm install https://github.com/Kartmax-technology/kartmax-search-front-end-package.git
+  npm install https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package.git
     ```
 - Once the installation is complete, you shall have a bugFile.js file in root.
 - Paste these function in main.js file
