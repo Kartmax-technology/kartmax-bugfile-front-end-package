@@ -5,12 +5,18 @@
 
 # Package installation
 
-- [CRITICAL] Make sure you have access to this Github Repo in the first place.
 - Open a terminal in your root folder of your project.
 - Run
     ```
+  npm install git+https://<token-from-github>:x-oauth-basic@github.com/Kartmax-technology/kartmax-bugfile-front-end-package.git --save
+    ```
+    
+    OR (if the above doesn't work)
+    
+    ```
   npm install https://github.com/Kartmax-technology/kartmax-bugfile-front-end-package.git
     ```
+   
 - Once the installation is complete, you shall have the package in your node modules folder.
 
 [![Kartmax Front-end Bugfile](https://img.youtube.com/vi/NJukhVAUIRw/0.jpg)](https://www.youtube.com/watch?v=NJukhVAUIRw)
@@ -29,7 +35,7 @@
   ```
    Vue.config.errorHandler = (error, vm, info) => {
          let config = {
-            key: "QHixYrGS9EHSZqLJSXCwduKj1lC9Dv7NIl95GN9vPmXVm12vzj9KKUpHzQzIYA6j",
+            key: "QHixYrGS9EHSZqLJSXCwduKj1lC9Dv7NIl95GN9vPmXVm12vzj9KKUpHzQzIYA6j", //(bugfile key)
             user : "Aakanksha",
             logger: "Admin",
             source: "warning",
